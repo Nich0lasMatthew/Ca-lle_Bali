@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;500&family=Poppins:wght@400;500;600&display=swap");
+
+:root {
+  --bg-color: #f8f7f5;
+  --card-bg: #fff;
+  --text-color: #2f2c2b;
+  --text-muted: #7d7a79;
+  --accent-color: #8b7c69;
+  --border-color: #e1ddd8;
+}
+
+/* Base reset */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+
+/* Root container */
+
+/* Main layout wrapper */
+main {
+  flex: 1;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+/* Limit width only for content sections (not hero) */
+main section:not(.hero) {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+}
+
+/* Ensure sections have breathing room */
+section.hero {
+  margin: 0;
+  padding: 0 0 2rem 0;
+}

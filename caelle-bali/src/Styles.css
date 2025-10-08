@@ -1,0 +1,158 @@
+:root {
+  --nav-color:#FAFAF9;
+  --bg-color: #fdfdfb;
+  --card-bg: #fff;
+  --text-color: #2f2c2b;
+  --text-muted: #7d7a79;
+  --accent-color: #8b7c69;
+  --border-color: #e1ddd8;
+}
+
+/* Base reset */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+
+/* === NAVBAR BASE === */
+.navbar {
+  background: var(--card-bg);
+  border-bottom: 1px solid var(--border-color);
+  padding: 1.5rem 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px; /* more natural navbar height */
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+/* Layout Columns */
+.navbar .left,
+.navbar .middle,
+.navbar .right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+/* Center Brand */
+.navbar .middle {
+  justify-content: center;
+}
+
+.navbar .middle h1 {
+  font-family: 'Bodoni', serif;
+  font-weight: 500;
+  font-size: 2rem;
+  margin: 0;
+  color: var(--text-color);
+  letter-spacing: 0.5px;
+}
+
+/* Right Links */
+.navbar .right {
+  justify-content: flex-end;
+  gap: 2rem;
+}
+
+/* All links same font */
+.navbar .right a {
+  position: relative;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif; /* ✅ same font as body */
+  font-weight: 300;
+  font-size: 1rem;
+  color: var(--text-color);
+  transition: color 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+/* Smooth underline animation */
+.navbar .right a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px; /* space below text */
+  width: 0%;
+  height: 2px;
+  background: var(--accent-color);
+  transition: width 0.4s ease-in-out, right 0.4s ease-in-out;
+}
+
+/* Navbar right group hover/focus effects */
+.navbar .right:hover a {
+  opacity: 0.4;
+  /* color: var(--text-muted); */
+}
+.navbar .right a:hover {
+  opacity: 1;
+  /* color: var(--accent-color); */
+}
+.navbar .right a:hover::after {
+  width: 100%;
+}
+
+/* Optional: make underline flow right-to-left */
+.navbar .right a::after {
+  right: 0;
+  left: auto;
+  transition: width 0.4s ease-in-out, right 0.4s ease-in-out;
+}
+
+.navbar .right a:hover::after {
+  left: 0;
+  right: auto;
+  width: 100%;
+}
+
+/* Product grid
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+}
+.product-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.2s ease;
+}
+.product-card:hover {
+  transform: translateY(-5px);
+}
+.product-card img {
+  width: 100%;
+  object-fit: cover;
+}
+.product-card h3 {
+  margin: 1rem;
+  font-size: 1.1rem;
+}
+.product-card p {
+  margin: 0 1rem 1rem;
+  color: var(--text-muted);
+}
+.product-card a {
+  display: block;
+  margin: 0 1rem 1rem;
+  text-decoration: none;
+  color: var(--accent-color);
+  font-weight: 600;
+}
+.product-card a:hover {
+  text-decoration: underline;
+} */
+
+/* Footer */
+footer {
+  background: var(--card-bg);
+  border-top: 1px solid var(--border-color);
+  padding: 2rem;
+  text-align: center;
+  color: var(--text-muted);
+}
