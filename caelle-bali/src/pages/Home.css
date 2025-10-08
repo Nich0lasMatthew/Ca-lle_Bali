@@ -2,7 +2,7 @@
 .banner {
   position: relative;
   width: 100%;
-  height: 80vh;
+  height: 90vh;
   overflow: hidden;
   margin: 0;
   padding: 0;
@@ -65,7 +65,7 @@
   font-family: "Poppins", sans-serif; /* ✅ match INTRODUCING */
   font-weight: 500; /* slightly heavier for visual balance */
   font-size: 2.8rem;
-  letter-spacing: 3px; /* elegant spacing */
+  letter-spacing: 20px; /* elegant spacing */
   text-transform: uppercase;
   margin-bottom: 1rem;
 }
