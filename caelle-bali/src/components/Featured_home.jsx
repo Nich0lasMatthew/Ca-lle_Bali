@@ -1,9 +1,7 @@
 import React from "react";
 import catalog from "../data/catalog.json";
 import "./Featured_home.css";
-
-// Import all images in the assets folder automatically
-const images = import.meta.glob("../assets/*", { eager: true });
+import caelleImage from "../assets/caelle-with-text.png";
 
 const Featured = () => {
   return (
@@ -11,18 +9,19 @@ const Featured = () => {
       <h3 className="featured-heading">Most Popular</h3>
       <div className="featured-grid">
         {catalog
-          .filter((item) => item.Status === "Available")
-          .map((item) => {
-            const imagePath = `../assets/${item["Image File Name / URL"]}`;
-            const image = images[imagePath]?.default; // get resolved image path
-
-            return (
-              <div key={item.ID} className="featured-item">
+          .filter(
+            (item) => item.Status === "Available" && Number(item["Stock / Quantity"]) >= 5
+          )
+          .map((item) => (
+            <div key={item.ID} className="featured-item">
+              <div className="featured-image-container">
                 <img
-                  src={image}
+                  src={caelleImage}
                   alt={item["Product Name"]}
                   className="featured-image"
                 />
+              </div>
+              <div className="featured-content">
                 <div className="featured-product-name">
                   {item["Product Name"]}
                 </div>
@@ -39,8 +38,8 @@ const Featured = () => {
                   Order via WhatsApp
                 </a>
               </div>
-            );
-          })}
+            </div>
+          ))}
       </div>
     </section>
   );
