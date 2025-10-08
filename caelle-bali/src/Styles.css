@@ -24,7 +24,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 20px; /* slightly taller for spacing */
+  height: 20px; /* slightly taller for   spacing */
   font-family: 'Poppins', sans-serif;
 
   /* ✅ Sticky behavior */
@@ -71,7 +71,7 @@ body {
 
 .navbar .left h1 span {
   font-weight: 400; /* slightly heavier for contrast */
-  color: var(--accent-color); /* optional gold accent */
+  color: grey; /* optional gold accent */
 }
 
 /* Center Brand */
@@ -99,7 +99,7 @@ body {
   position: relative;
   text-decoration: none;
   font-family: 'Poppins', sans-serif; /* ✅ same font as body */
-  font-weight: 300;
+  font-weight: 50px;
   font-size: 1rem;
   color: var(--text-color);
   transition: color 0.5s ease-in-out, opacity 0.5s ease-in-out;
@@ -143,45 +143,6 @@ body {
   width: 100%;
 }
 
-/* Product grid
-.product-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 2rem;
-  padding: 2rem;
-}
-.product-card {
-  background: var(--card-bg);
-  border: 1px solid var(--border-color);
-  border-radius: 8px;
-  overflow: hidden;
-  transition: transform 0.2s ease;
-}
-.product-card:hover {
-  transform: translateY(-5px);
-}
-.product-card img {
-  width: 100%;
-  object-fit: cover;
-}
-.product-card h3 {
-  margin: 1rem;
-  font-size: 1.1rem;
-}
-.product-card p {
-  margin: 0 1rem 1rem;
-  color: var(--text-muted);
-}
-.product-card a {
-  display: block;
-  margin: 0 1rem 1rem;
-  text-decoration: none;
-  color: var(--accent-color);
-  font-weight: 600;
-}
-.product-card a:hover {
-  text-decoration: underline;
-} */
 
 /* Footer */
 footer {
